@@ -1,0 +1,139 @@
+/* Styling CSS untuk file HTML versi 17 */
+
+* { /* Tanda bintang (*) digunakan untuk menyeleksi seluruh elemen */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0; /* Agar elemen body bisa mepet ke halaman web*/
+    padding: 0; 
+}
+
+/* Styling judul pada elemen h2 dan h3 menjadi biru */
+h2, h3 {
+    color: #00a2c6;
+}
+
+/* Styling header website */
+/* Pastikan nama class sama dengan HTML. Besar kecil (kapital) berpengaruh */
+.Jumbotron {
+    font-size: 25px;
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    color: white;
+}
+
+header {
+    display:inline;
+}
+
+/* Pewarnaan background pada elemen nav bar */
+nav {
+    background-color: #0c68be;
+    padding: 5px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    position: sticky; /* Untuk membuat elemen nav tetap stay di atas screen */
+    top: 0;
+}
+
+/* Styling font yang ada di list */
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+/* Styling yang berfungsi apabila kursor mengarahkan ke navigasi, maka style di bawah ini akan bekerja */
+nav a:hover {
+    background-color: rgba(25, 34, 113, 0.34);
+    font-weight: bold;
+    color:black;
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex; /* Membuat elemen nav ul menjadi flexbox */
+    gap: 2rem; /* Menerapkan jarak pada setiap flex item */
+}
+/* Styling navigasi yaitu pada elemen 'li' yang menjadi anak elemen dari 'nav' */
+nav li {
+    list-style-type: none; /* Berfungsi untuk menghilangkan tanda titik yang biasanya ada pada sebelum list */
+}
+
+/* Styling pada elemen aside > article > header */
+.profile header {
+    text-align: center;
+}
+
+/* Pemberian jarak pada elemen main */
+main {
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Styling pada id="content" */
+#content {
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap; /* Mengatur flex direction dan flex wrap sekaligus */
+    gap: 1rem 2rem;
+}
+
+aside {
+    flex: 1;
+}
+
+@media screen and (max-width: 1200px) { /* Jika lebar screen device kurang dari 1200 pixel, maka styling ini akan berlaku */
+    main {
+        flex-flow: column nowrap; 
+    }
+    main aside {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) { /* Jika lebar screen device kurang dari 768 pixel, maka styling ini akan diterapkan */
+    nav ul {
+        justify-content: center;
+    }
+    main aside {
+        align-self: stretch;
+    }
+}
+
+/* Styling seluruh gambar yang ada di website HTML */
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover; /* Digunakan agar objek gambar terlihat proposional */
+    object-position: center; /* Digunakan agar objek gambar terlihat proposional */
+}
+
+/* Pengaturan ukuran gambar logo Kota Bandung */
+.profile img {
+    width: 200px;
+}
+
+/* Styling article dengan class card */
+/* Styling shadow dan border radius */
+.card {
+    box-shadow: 2px 8px 32px 2px rgba(0, 0, 0, 2);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 10px 10px 10px;
+}
+
+/* Styling footer pada file HTML */
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+}
